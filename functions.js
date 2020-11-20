@@ -1,7 +1,11 @@
 //Genera un numero casuale tra min e max
 function randomBetween(min, max){
   let random = parseInt(Math.floor((Math.random()*(max - min)) + min + 1));
-  return random;
+      if (random !== 18 &&  random !==10 && random !==72 && random !==7 && random !==64){
+  return random;} else{
+    return 1
+
+  }
 };
 
 // Genera un array di risposte casuali di lunghezza "howmanyanswers"
