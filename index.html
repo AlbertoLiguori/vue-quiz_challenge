@@ -44,14 +44,12 @@
 
                         <li v-for="(element,index) in questionArray">
 
-                              <input @click="(print())" type="button" name="" :value="(questionArray[qindex].answers[index].bool)">{{(questionArray[qindex].answers[index].question)}}
+                              <input @click="(print())" type="radio" :name="qindex" :value="(questionArray[qindex].answers[index].bool)">{{(questionArray[qindex].answers[index].question)}}
 
                         </li>
 
 
                   </ul>
-
-
 
               </div>
 
@@ -61,7 +59,7 @@
 
         <div class="counter-container">
 
-            <h1>{{counter}}</h1>
+              <h1>Punteggio: {{counter}}</h1>
 
         </div>
 
@@ -70,5 +68,7 @@
 
 
         <script src="script.js"></script>
+
     </body>
+    
 </html>
