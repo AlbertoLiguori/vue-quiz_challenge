@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+        <!-- LINK TO FONTAWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+        <!-- LINK BOOTSTRAP -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+
+        <!-- LINK TO MY CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- LINK TO JQUERY -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+        <!-- LINK TO VUE -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+        <!-- LINK TO JS FUNCTIONS -->
+        <script src="functions.js" charset="utf-8"></script>
+
+        <title>New Project</title>
+    </head>
+    <body>
+      <div id="root">
+
+        <ul v-for="(qelement, qindex) in questionArray">
+
+          <li>
+
+              <div class="quiz-container">
+
+                  <h2>{{title}}</h2>
+
+                  <h3>Question {{qindex+1}}:</h3>
+
+                  <h5>What Is {{questionArray[qindex].domanda}} ?</h5>
+
+                  <ul>
+
+                        <li v-for="(element,index) in questionArray">
+
+                              <input @click="(print())" type="button" name="" :value="(questionArray[qindex].answers[index].bool)">{{(questionArray[qindex].answers[index].question)}}
+
+                        </li>
+
+
+                  </ul>
+
+              </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
