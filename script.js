@@ -34,10 +34,16 @@ const app= new Vue({
 
     ],
 
+    counter:0,
+
   },
   methods:{
         print:function(){
-          console.log(event.target.value)
+          if (event.target.value === "false"){
+            this.counter--
+          }else{
+            this.counter++
+          }
         }
     }
 
